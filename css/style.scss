@@ -4,22 +4,51 @@
 }
 
 .wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     background: #cccccc;
     height: 100vh;
     padding-top: 12rem;
     box-sizing: border-box;
+    text-align: center;
+
+    p {
+        color: #000;
+    }
 
     #txt {
-        text-align: center;
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
         padding: 2rem 0;
         font-size: 3rem;
         opacity: 0;
-        transition: 2s;
+        transition: .5s;
 
         &.txDeco {
             padding-top: 0rem;
             font-size: 3rem;
             opacity: 1;
+            animation: anime_01 1s;
+            transform-origin: center top;
         }
+        @keyframes anime_01 {
+            0% {
+                transform: scale(1,1);
+            }
+            40% {
+                transform: scale(1,1);
+            }
+            75% {
+                transform: scale(1,.5);
+            }
+            100% {
+                transform: scale(1,1);
+            }
+        }
+    }
+    .wrap {
+        padding-top: 6rem;
     }
 }
